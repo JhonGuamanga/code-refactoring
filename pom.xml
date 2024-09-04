@@ -8,9 +8,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.appgate.dtp</groupId>
-    <artifactId>{{project_name}}</artifactId>
-    <version>{{project_version}}</version>
-    <name>{{project_name}}</name>
+    <artifactId>code-refactoring</artifactId>
+    <version>1.0.0</version>
+    <name>code-refactoring</name>
 
     <!-- ........................................................................................................... -->
     <!-- Project parent -->
@@ -81,6 +81,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.8.0</version>
         </dependency>
 
         <!-- Annotation processors -->
