@@ -13,7 +13,4 @@ public class FacebookMention extends SocialMention {
     private String facebookAccount;
     private List<String> facebookComments;
 
-    public FacebookMention(String message, String creationDate, String riskLevel) {
-        super(message, creationDate, riskLevel);
-    }
 }

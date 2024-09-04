@@ -10,8 +10,4 @@ import lombok.experimental.SuperBuilder;
 public class TwitterMention extends SocialMention {
     private String twitterAccount;
     private String twitterUrl;
-
-    public TwitterMention(String message, String creationDate, String riskLevel) {
-        super(message, creationDate, riskLevel);
-    }
 }

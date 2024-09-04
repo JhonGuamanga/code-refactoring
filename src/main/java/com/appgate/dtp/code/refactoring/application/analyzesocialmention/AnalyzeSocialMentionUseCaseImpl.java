@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 public class AnalyzeSocialMentionUseCaseImpl implements AnalyzeSocialMentionUseCase {
     private static final AppgateLogger log = AppgateLogger.getLogger(AnalyzeSocialMentionUseCaseImpl.class.getName());
 
-    private final EntriesValidatorService entriesValidatorService;
 
     public AnalyzeSocialMentionUseCaseImpl(EntriesValidatorService entriesValidatorService) {
         this.entriesValidatorService = entriesValidatorService;

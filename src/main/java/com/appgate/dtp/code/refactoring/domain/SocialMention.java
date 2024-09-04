@@ -12,6 +12,8 @@ import lombok.Getter;
 @Builder(setterPrefix = "with")
 public abstract class SocialMention implements SelfValidating {
 
+    private SocialMentionId id;
+
     private String message;
 
     private String creationDate;
