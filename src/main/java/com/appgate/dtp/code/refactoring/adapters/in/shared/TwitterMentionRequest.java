@@ -1,24 +1,37 @@
 package com.appgate.dtp.code.refactoring.adapters.in.shared;
 
 import com.appgate.dtp.code.refactoring.adapters.in.analyzesocialmention.rest.AnalyzeSocialMentionRequest;
-import com.appgate.dtp.code.refactoring.domain.SocialMention;
-import com.appgate.dtp.code.refactoring.domain.TwitterMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TwitterMention;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class TwitterMentionRequest extends AnalyzeSocialMentionRequest {
+    public static final String TWITTER_ACCOUNT_NULL_MESSAGE = "'twitterAccount' field must not be null";
+    public static final String TWITTER_URL_NULL_MESSAGE = "'twitterUrl' field must not be null";
+
+    @NotNull(message = TWITTER_ACCOUNT_NULL_MESSAGE)
+    @NotEmpty
     private String twitterAccount;
+    @NotNull(message = TWITTER_URL_NULL_MESSAGE)
+    @NotEmpty
     private String twitterUrl;
 
     @Override
     protected SocialMention toSocialMention(){
-        var entryBuilder = TwitterMention.builder()
+        var builder = TwitterMention.builder()
             .withTwitterAccount(twitterAccount)
             .withTwitterUrl(twitterUrl)
             .withMessage(this.getMessage())
             .withCreationDate(this.getCreationDate());
-        return entryBuilder.build();
+        return builder.build();
     }
 }

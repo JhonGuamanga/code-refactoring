@@ -1,6 +1,6 @@
 package com.appgate.dtp.code.refactoring.application.analyzesocialmention;
 
-import com.appgate.dtp.code.refactoring.domain.*;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.*;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 

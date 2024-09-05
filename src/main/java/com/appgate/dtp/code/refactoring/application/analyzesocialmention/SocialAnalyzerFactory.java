@@ -1,8 +1,11 @@
-package com.appgate.dtp.code.refactoring.domain;
+package com.appgate.dtp.code.refactoring.application.analyzesocialmention;
 
 import com.appgate.dtp.code.refactoring.application.analyzesocialmention.FacebookAnalyzerService;
 import com.appgate.dtp.code.refactoring.application.analyzesocialmention.SocialAnalyzerService;
 import com.appgate.dtp.code.refactoring.application.analyzesocialmention.TwitterAnalyzerService;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.FacebookMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TwitterMention;
 
 public class SocialAnalyzerFactory {
 

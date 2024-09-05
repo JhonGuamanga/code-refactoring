@@ -1,7 +1,9 @@
-info:
-  app:
-    name: @project.artifactId@
-    version: @project.version@
+spring:
+  datasource:
+    url: ${DATABASE_HOST:jdbc:postgresql://dbnonprod.dms.appgate.com:5432/detectms}
+    username: ${DATABASE_USERNAME:detectms}
+    password: ${DATABASE_PASSWORD:detectms}
+    driver-class-name: org.postgresql.Driver
 
 server:
   port: 8080

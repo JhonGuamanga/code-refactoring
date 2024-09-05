@@ -2,9 +2,9 @@ package com.appgate.dtp.code.refactoring.adapters.out.analyzesocialmention;
 
 
 import com.appgate.dtp.code.refactoring.adapters.out.shared.entities.TweetEntity;
-import com.appgate.dtp.code.refactoring.domain.SocialMention;
-import com.appgate.dtp.code.refactoring.domain.SocialMentionId;
-import com.appgate.dtp.code.refactoring.domain.TwitterMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMentionId;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TwitterMention;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,12 +22,12 @@ public class TweetMapper {
     }
 
     public SocialMention fromEntityToDomain(TweetEntity entity) {
-        var entryBuilder = TwitterMention.builder()
+        var builder = TwitterMention.builder()
             .withId(new SocialMentionId(entity.getId()))
             .withRiskLevel(entity.getRiskLevel())
             .withCreationDate(entity.getCreationDate())
             .withMessage(entity.getMessage());
 
-        return entryBuilder.build();
+        return builder.build();
     }
 }

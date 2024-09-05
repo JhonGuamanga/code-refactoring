@@ -1,9 +1,9 @@
 package com.appgate.dtp.code.refactoring.adapters.out.analyzesocialmention;
 
 import com.appgate.dtp.code.refactoring.adapters.out.shared.repositories.JpaFacebookPostRepository;
-import com.appgate.dtp.code.refactoring.domain.FacebookMention;
-import com.appgate.dtp.code.refactoring.domain.FacebookPostRepository;
-import com.appgate.dtp.code.refactoring.domain.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.FacebookMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.FacebookPostRepository;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
 import com.appgate.dtp.shared.utils.AppgateLogger;
 import org.springframework.stereotype.Repository;
 

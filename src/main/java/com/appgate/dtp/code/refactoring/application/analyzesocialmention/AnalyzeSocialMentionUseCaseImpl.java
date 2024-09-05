@@ -1,10 +1,9 @@
 package com.appgate.dtp.code.refactoring.application.analyzesocialmention;
 
 
-import com.appgate.dtp.code.refactoring.domain.FacebookPostRepository;
-import com.appgate.dtp.code.refactoring.domain.RiskLevel;
-import com.appgate.dtp.code.refactoring.domain.SocialAnalyzerFactory;
-import com.appgate.dtp.code.refactoring.domain.TweetRepository;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.FacebookPostRepository;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.RiskLevel;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TweetRepository;
 import com.appgate.dtp.shared.utils.AppgateLogger;
 import org.springframework.stereotype.Service;
 
@@ -20,14 +19,14 @@ public class AnalyzeSocialMentionUseCaseImpl implements AnalyzeSocialMentionUseC
     }
 
     public RiskLevel execute(AnalyzeSocialMentionCommand command) {
-        log.info("Creating entry use case: [{}] ", command.toString());
-        SocialAnalyzerService analyzer = SocialAnalyzerFactory.getAnalyzer(command.socialMention());
+        log.info("Analyzing social mention use case: [{}] ", command.toString());
+        SocialAnalyzerService analyzer = SocialAnalyzerFactory.getAnalyzer(command.getSocialMention());
         if (analyzer instanceof FacebookAnalyzerService) {
             ((FacebookAnalyzerService) analyzer).setRepository(facebookPostRepository);
         } else if (analyzer instanceof TwitterAnalyzerService) {
             ((TwitterAnalyzerService) analyzer).setRepository(tweetRepository);
         }
-        return analyzer.analyze(command.socialMention());
+        return analyzer.analyze(command.getSocialMention());
     }
 
 }

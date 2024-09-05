@@ -23,6 +23,6 @@ public interface AnalyzeSocialMentionEntryPoint {
             @ApiResponse(responseCode = "500", description = "If fail server", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorMessage.class))),
         })
     ResponseEntity<AnalyzeSocialMentionResource> analyzeSocialMention(
-        @RequestBody AnalyzeSocialMentionRequest entryRequest
+        @RequestBody AnalyzeSocialMentionRequest request
     );
 }

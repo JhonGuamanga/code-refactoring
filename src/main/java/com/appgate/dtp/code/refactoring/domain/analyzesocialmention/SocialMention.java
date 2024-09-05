@@ -1,15 +1,15 @@
-package com.appgate.dtp.code.refactoring.domain;
+package com.appgate.dtp.code.refactoring.domain.analyzesocialmention;
 
 import com.appgate.dtp.shared.utils.SelfValidating;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @AllArgsConstructor
 @EqualsAndHashCode
-@Builder(setterPrefix = "with")
+@SuperBuilder(setterPrefix = "with")
 public abstract class SocialMention implements SelfValidating {
 
     private SocialMentionId id;

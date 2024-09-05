@@ -21,7 +21,7 @@ public class AnalyzeAnalyzeSocialMentionController implements AnalyzeSocialMenti
         this.analyzeSocialMentionUseCase = analyzeSocialMentionUseCase;
     }
 
-    @PostMapping("/entries")
+    @PostMapping("/analyze")
     public ResponseEntity<AnalyzeSocialMentionResource> analyzeSocialMention(@RequestBody AnalyzeSocialMentionRequest analyzeSocialMentionRequest) {
         log.info("Analyzing social mention with message: [{}] and creationDate: [{}]", analyzeSocialMentionRequest.getMessage(), analyzeSocialMentionRequest.getCreationDate());
         analyzeSocialMentionRequest.validateSelf();
@@ -30,8 +30,8 @@ public class AnalyzeAnalyzeSocialMentionController implements AnalyzeSocialMenti
             analyzeSocialMentionRequest.toSocialMention()
         );
 
-        final var entryResult = analyzeSocialMentionUseCase.execute(analyzeSocialMentionCommand);
+        final var result = analyzeSocialMentionUseCase.execute(analyzeSocialMentionCommand);
 
-        return new ResponseEntity<>(AnalyzeSocialMentionResource.from(entryResult), HttpStatus.CREATED);
+        return new ResponseEntity<>(AnalyzeSocialMentionResource.from(result), HttpStatus.CREATED);
     }
 }

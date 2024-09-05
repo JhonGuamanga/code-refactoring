@@ -1,4 +1,4 @@
-package com.appgate.dtp.code.refactoring.domain;
+package com.appgate.dtp.code.refactoring.domain.analyzesocialmention;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

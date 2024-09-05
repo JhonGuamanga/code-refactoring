@@ -2,9 +2,9 @@ package com.appgate.dtp.code.refactoring.adapters.out.analyzesocialmention;
 
 
 import com.appgate.dtp.code.refactoring.adapters.out.shared.entities.FacebookPostEntity;
-import com.appgate.dtp.code.refactoring.domain.FacebookMention;
-import com.appgate.dtp.code.refactoring.domain.SocialMention;
-import com.appgate.dtp.code.refactoring.domain.SocialMentionId;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.FacebookMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMentionId;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,12 +22,12 @@ public class FacebookPostMapper {
     }
 
     public SocialMention fromEntityToDomain(FacebookPostEntity facebookPostEntity) {
-        var entryBuilder = FacebookMention.builder()
+        var builder = FacebookMention.builder()
             .withId(new SocialMentionId(facebookPostEntity.getId()))
             .withRiskLevel(facebookPostEntity.getRiskLevel())
             .withCreationDate(facebookPostEntity.getCreationDate())
             .withMessage(facebookPostEntity.getMessage());
 
-        return entryBuilder.build();
+        return builder.build();
     }
 }

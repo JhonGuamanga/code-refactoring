@@ -1,6 +1,6 @@
 package com.appgate.dtp.code.refactoring.adapters.in.shared;
 
-import com.appgate.dtp.code.refactoring.domain.RiskLevel;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.RiskLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,10 +16,10 @@ public class AnalyzeSocialMentionResource {
     private String riskLevel;
 
     public static AnalyzeSocialMentionResource from(RiskLevel riskLevel) {
-        var entryResourceBuilder = AnalyzeSocialMentionResource
+        var builder = AnalyzeSocialMentionResource
             .builder()
             .withRiskLevel(riskLevel.name());
 
-        return entryResourceBuilder.build();
+        return builder.build();
     }
 }
