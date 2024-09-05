@@ -21,13 +21,13 @@ public class AnalyzeSocialMentionUseCaseImpl implements AnalyzeSocialMentionUseC
 
     public RiskLevel execute(AnalyzeSocialMentionCommand command) {
         log.info("Creating entry use case: [{}] ", command.toString());
-        SocialAnalyzerService analyzer = SocialAnalyzerFactory.getAnalyzer(command.getSocialMention());
+        SocialAnalyzerService analyzer = SocialAnalyzerFactory.getAnalyzer(command.socialMention());
         if (analyzer instanceof FacebookAnalyzerService) {
             ((FacebookAnalyzerService) analyzer).setRepository(facebookPostRepository);
         } else if (analyzer instanceof TwitterAnalyzerService) {
             ((TwitterAnalyzerService) analyzer).setRepository(tweetRepository);
         }
-        return analyzer.analyze(command.getSocialMention());
+        return analyzer.analyze(command.socialMention());
     }
 
 }
