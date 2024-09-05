@@ -1,6 +1,10 @@
-package com.appgate.dtp.code.refactoring.application.analyzesocialmention;
+package com.appgate.dtp.code.refactoring.application.analyzesocialmention.services;
 
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.*;
+import com.appgate.dtp.code.refactoring.application.analyzesocialmention.analyzers.TwitterPostAnalyzer;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.definitions.TweetRepository;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.TwitterMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.RiskLevel;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +19,8 @@ public class TwitterAnalyzerService implements SocialAnalyzerService {
         TwitterMention twitterMention = (TwitterMention) mention;
         String message = "tweeterMessage: " + twitterMention.getMessage();
 
-        double twitterScore = TwitterPostAnalyzer.analyzeTweet(message, twitterMention.getTwitterUrl(), twitterMention.getTwitterAccount());
+        double twitterScore = TwitterPostAnalyzer.analyzeTweet(message,  twitterMention.getTwitterAccount().getName(),
+            twitterMention.getTwitterUrl());
         repository.insertTweet(twitterMention);
         return determineRiskLevel(twitterScore);
     }

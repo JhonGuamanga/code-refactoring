@@ -1,6 +1,6 @@
 package com.appgate.dtp.code.refactoring.application.analyzesocialmention;
 
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.SocialMention;
 import com.appgate.dtp.shared.utils.SelfValidating;
 import lombok.Builder;
 import lombok.Getter;

@@ -2,9 +2,9 @@ package com.appgate.dtp.code.refactoring.adapters.out.analyzesocialmention;
 
 
 import com.appgate.dtp.code.refactoring.adapters.out.shared.repositories.JpaTweetRepository;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TweetRepository;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TwitterMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.definitions.TweetRepository;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.TwitterMention;
 import com.appgate.dtp.shared.utils.AppgateLogger;
 import org.springframework.stereotype.Repository;
 

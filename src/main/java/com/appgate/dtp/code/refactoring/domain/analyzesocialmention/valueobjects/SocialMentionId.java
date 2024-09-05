@@ -1,4 +1,4 @@
-package com.appgate.dtp.code.refactoring.domain.analyzesocialmention;
+package com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects;
 
 
 import com.appgate.dtp.shared.utils.SelfValidating;

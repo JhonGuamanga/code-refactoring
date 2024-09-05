@@ -1,8 +1,10 @@
 package com.appgate.dtp.code.refactoring.adapters.in.shared;
 
 import com.appgate.dtp.code.refactoring.adapters.in.analyzesocialmention.rest.AnalyzeSocialMentionRequest;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TwitterMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.Account;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.TwitterMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.Url;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -28,8 +30,8 @@ public class TwitterMentionRequest extends AnalyzeSocialMentionRequest {
     @Override
     protected SocialMention toSocialMention(){
         var builder = TwitterMention.builder()
-            .withTwitterAccount(twitterAccount)
-            .withTwitterUrl(twitterUrl)
+            .withTwitterAccount(new Account(twitterAccount))
+            .withTwitterUrl(new Url(twitterUrl))
             .withMessage(this.getMessage())
             .withCreationDate(this.getCreationDate());
         return builder.build();

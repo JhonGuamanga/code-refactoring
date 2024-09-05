@@ -2,7 +2,7 @@ package com.appgate.dtp.code.refactoring.adapters.in.analyzesocialmention.rest;
 
 import com.appgate.dtp.code.refactoring.adapters.in.shared.FacebookMentionRequest;
 import com.appgate.dtp.code.refactoring.adapters.in.shared.TwitterMentionRequest;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.SocialMention;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities.SocialMention;
 import com.appgate.dtp.shared.utils.SelfValidating;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

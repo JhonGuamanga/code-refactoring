@@ -2,7 +2,7 @@ package com.appgate.dtp.code.refactoring.adapters.in.analyzesocialmention.rest;
 
 import com.appgate.dtp.code.refactoring.adapters.in.shared.TestUtil;
 import com.appgate.dtp.code.refactoring.application.analyzesocialmention.AnalyzeSocialMentionUseCase;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.RiskLevel;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.RiskLevel;
 import com.appgate.dtp.shared.config.IntegrationTest;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;

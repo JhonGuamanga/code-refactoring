@@ -1,5 +1,7 @@
-package com.appgate.dtp.code.refactoring.domain.analyzesocialmention;
+package com.appgate.dtp.code.refactoring.domain.analyzesocialmention.entities;
 
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.RiskLevel;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.SocialMentionId;
 import com.appgate.dtp.shared.utils.SelfValidating;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -18,9 +20,5 @@ public abstract class SocialMention implements SelfValidating {
 
     private String creationDate;
 
-    private String riskLevel;
-
-    public void validateSelf() {
-        this.validateSelf(this);
-    }
+    private RiskLevel riskLevel;
 }

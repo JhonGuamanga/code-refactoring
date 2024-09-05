@@ -1,9 +1,12 @@
 package com.appgate.dtp.code.refactoring.application.analyzesocialmention;
 
 
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.FacebookPostRepository;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.RiskLevel;
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.TweetRepository;
+import com.appgate.dtp.code.refactoring.application.analyzesocialmention.services.FacebookAnalyzerService;
+import com.appgate.dtp.code.refactoring.application.analyzesocialmention.services.SocialAnalyzerService;
+import com.appgate.dtp.code.refactoring.application.analyzesocialmention.services.TwitterAnalyzerService;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.definitions.FacebookPostRepository;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.RiskLevel;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.definitions.TweetRepository;
 import com.appgate.dtp.shared.utils.AppgateLogger;
 import org.springframework.stereotype.Service;
 

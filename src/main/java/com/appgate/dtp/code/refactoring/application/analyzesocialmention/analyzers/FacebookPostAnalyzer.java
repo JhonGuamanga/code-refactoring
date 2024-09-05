@@ -1,4 +1,4 @@
-package com.appgate.dtp.code.refactoring.domain.analyzesocialmention;
+package com.appgate.dtp.code.refactoring.application.analyzesocialmention.analyzers;
 
 public class FacebookPostAnalyzer {
 

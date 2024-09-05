@@ -1,6 +1,6 @@
 package com.appgate.dtp.code.refactoring.adapters.in.shared;
 
-import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.RiskLevel;
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.RiskLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

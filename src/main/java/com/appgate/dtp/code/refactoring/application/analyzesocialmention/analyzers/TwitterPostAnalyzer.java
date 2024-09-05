@@ -1,4 +1,6 @@
-package com.appgate.dtp.code.refactoring.domain.analyzesocialmention;
+package com.appgate.dtp.code.refactoring.application.analyzesocialmention.analyzers;
+
+import com.appgate.dtp.code.refactoring.domain.analyzesocialmention.valueobjects.Url;
 
 public class TwitterPostAnalyzer {
 
@@ -10,7 +12,7 @@ public class TwitterPostAnalyzer {
      * @param twitterUrl The URL of the tweet.
      * @return A score representing the quality or risk associated with the tweet.
      */
-    public static double analyzeTweet(String tweet, String twitterAccount, String twitterUrl) {
-        return tweet.length() + twitterAccount.length() + twitterUrl.length();
+    public static double analyzeTweet(String tweet, String twitterAccount, Url twitterUrl) {
+        return tweet.length() + twitterAccount.length() + twitterUrl.hashCode();
     }
 }
