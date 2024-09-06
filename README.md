@@ -162,11 +162,6 @@ the [Versioning](https://appgateinc.atlassian.net/wiki/spaces/DTP/pages/41364684
 >
 > :closed_lock_with_key: **fix(DTPV10-2345)**: fix secrets management
 
-## More information
-
-You can find more information like c4 model diagrams and entrypoints documentation at confluence, please refer to
-the [Documentation](https://appgateinc.atlassian.net/wiki/spaces/...).
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://shields.io/ -->
 
