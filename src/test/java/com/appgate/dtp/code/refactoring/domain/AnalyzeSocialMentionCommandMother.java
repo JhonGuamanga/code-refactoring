@@ -10,9 +10,9 @@ public class AnalyzeSocialMentionCommandMother {
         );
     }
 
-    public static AnalyzeSocialMentionCommand validCommandWithTwitter() {
+    public static AnalyzeSocialMentionCommand validCommandWithTwitter(String url) {
         return new AnalyzeSocialMentionCommand(
-            SocialMentionMother.newTwitterMention()
+            SocialMentionMother.newTwitterMention(url)
         );
     }
 }

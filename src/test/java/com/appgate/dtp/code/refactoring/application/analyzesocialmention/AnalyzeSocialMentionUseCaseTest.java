@@ -81,9 +81,8 @@ class AnalyzeSocialMentionUseCaseTest {
         this.command = AnalyzeSocialMentionCommandMother.validCommandWithFacebook();
     }
     private void givenThereIsValidAnalyzeTwitterMentionCommand() {
-        this.command = AnalyzeSocialMentionCommandMother.validCommandWithTwitter();
+        this.command = AnalyzeSocialMentionCommandMother.validCommandWithTwitter("https://google.com");
     }
-
 
     private void givenFacebookRepositoryInsertIsOk() {
         Mockito.when(this.facebookPostRepository.insertFBPost(any()))
@@ -108,13 +107,6 @@ class AnalyzeSocialMentionUseCaseTest {
             exception.printStackTrace();
         }
         Assertions.assertNull(this.exception);
-    }
-
-    private void thenThereWasException() {
-        if (this.exception != null) {
-            exception.printStackTrace();
-        }
-        Assertions.assertNotNull(this.exception);
     }
 
     private void thenInsertFBPostIsInvoked() {
