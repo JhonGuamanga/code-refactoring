@@ -21,7 +21,7 @@ public class AnalyzeAnalyzeSocialMentionController implements AnalyzeSocialMenti
         this.analyzeSocialMentionUseCase = analyzeSocialMentionUseCase;
     }
 
-    @PostMapping("/analyze")
+    @PostMapping("/analyze-social-mention")
     public ResponseEntity<AnalyzeSocialMentionResource> analyzeSocialMention(@RequestBody AnalyzeSocialMentionRequest analyzeSocialMentionRequest) {
         log.info("Analyzing social mention with message: [{}] and creationDate: [{}]", analyzeSocialMentionRequest.getMessage(), analyzeSocialMentionRequest.getCreationDate());
         analyzeSocialMentionRequest.validateSelf();

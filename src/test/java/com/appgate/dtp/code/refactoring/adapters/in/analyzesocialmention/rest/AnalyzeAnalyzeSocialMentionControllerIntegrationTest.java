@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 @WebMvcTest(AnalyzeAnalyzeSocialMentionController.class)
 @AutoConfigureMockMvc(addFilters = false)
-@DisplayName("Tests for create analyze social mention controller")
+@DisplayName("Tests for analyze social mention controller")
 @Tag(IntegrationTest.TAG)
 class AnalyzeAnalyzeSocialMentionControllerIntegrationTest {
 
@@ -107,7 +107,7 @@ class AnalyzeAnalyzeSocialMentionControllerIntegrationTest {
     }
 
     private void givenUrlRequestParams() {
-        this.urlRequest = "/api/v1/analyze";
+        this.urlRequest = "/api/v1/analyze-social-mention";
     }
 
     private void givenAValidRequestBody(String facebookAccount,

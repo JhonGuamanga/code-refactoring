@@ -48,7 +48,7 @@ class AnalyzeSocialMentionUseCaseTest {
     @Test
     @DisplayName("""
             Given a request with valid data
-            when save use case is executed
+            when analyze use case is executed
             then must be saved the facebook social mention
             and return the risk level
         """)
@@ -58,13 +58,13 @@ class AnalyzeSocialMentionUseCaseTest {
         whenUseCaseIsExecuted();
         thenThereWasNoException();
         thenInsertFBPostIsInvoked();
-        thenEntryResponseWasReturned();
+        thenRiskLevelResponseWasReturned();
     }
 
     @Test
     @DisplayName("""
             Given a request with valid data
-            when save use case is executed
+            when analyze use case is executed
             then must be saved the social mention
             and return the social mention
         """)
@@ -74,7 +74,7 @@ class AnalyzeSocialMentionUseCaseTest {
         whenUseCaseIsExecuted();
         thenThereWasNoException();
         thenInsertTweetIsInvoked();
-        thenEntryResponseWasReturned();
+        thenRiskLevelResponseWasReturned();
     }
 
     private void givenThereIsValidAnalyzeFacebookSocialMentionCommand() {
@@ -117,7 +117,7 @@ class AnalyzeSocialMentionUseCaseTest {
         verify(tweetRepository, times(1)).insertTweet(any());
     }
 
-    private void thenEntryResponseWasReturned() {
+    private void thenRiskLevelResponseWasReturned() {
         Assertions.assertNotNull(response);
     }
 }
